@@ -1,0 +1,28 @@
+{
+  "name": "react-native-talkingdata",
+  "version": "1.0.1",
+  "description": "TalkingData Module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reactnativecn/react-native-talkingdata.git"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "talkingdata"
+  ],
+  "author": "lvbingru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reactnativecn/react-native-talkingdata/issues"
+  },
+  "homepage": "https://github.com/reactnativecn/react-native-talkingdata#readme",
+  "dependencies": {
+    "es6-promisify": "^3.0.0"
+  }
+}
