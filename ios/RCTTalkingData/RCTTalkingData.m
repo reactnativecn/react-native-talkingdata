@@ -8,6 +8,7 @@
 
 #import "RCTTalkingData.h"
 #import "TalkingData.h"
+#import "RCTUtils.h"
 
 @implementation RCTTalkingData
 
@@ -66,7 +67,7 @@ RCT_EXPORT_METHOD(getDeviceID:(RCTResponseSenderBlock)callback)
 {
     NSString *deviceID = [TalkingData getDeviceID];
     if (callback) {
-        callback(@[[NSNull null], deviceID]);
+        callback(@[RCTNullIfNil(deviceID)]);
     }
 }
 

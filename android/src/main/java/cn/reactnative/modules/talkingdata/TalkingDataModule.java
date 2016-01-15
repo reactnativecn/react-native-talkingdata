@@ -105,7 +105,7 @@ public class TalkingDataModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void getDeviceID(Callback callback) {
         String deviceID = TCAgent.getDeviceId(getReactApplicationContext());
-        callback.invoke(null, deviceID);
+        callback.invoke(deviceID==null?"":deviceID);
     }
 
 }

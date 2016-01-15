@@ -24,7 +24,7 @@ rnpm link
 在你工程的`AppDelegate.m`文件中添加如下代码：
 
 ```
-#import "RCTLinkingManager.h"
+#import "RCTTalkingData.h"
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -40,14 +40,7 @@ rnpm link
 
 ### 安装Android工程
 
-在app的AndroidManifest.xml中`<application>`标签中添加如下代码：
-
-```
-	<meta-data android:name="TD_APP_ID" android:value="${TD_APPID}" />
-   	<meta-data android:name="TD_CHANNEL_ID" android:value="${APP_CHANNEL}" />
-```
-
-`android/app/build.gradle`里，defaultConfig栏目下添加如下代码：
+在`android/app/build.gradle`里，defaultConfig栏目下添加如下代码：
 
 ```
 	manifestPlaceholders = [
