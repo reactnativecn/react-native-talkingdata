@@ -1,6 +1,6 @@
 {
   "name": "react-native-talkingdata",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "TalkingData Module",
   "main": "index.js",
   "scripts": {

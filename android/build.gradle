@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:0.17.+'
+    compile 'com.facebook.react:react-native:+'
     compile files('libs/TalkingDataAnalytics_V2.1.37.jar')
 }
