@@ -44,9 +44,21 @@ rnpm link
 
 ```
 	manifestPlaceholders = [
-           TD_APPID: "talkingdata的APPID",//在此修改微信APPID
+           TD_APPID: "talkingdata的APPID",//在此修改为你的TalkingData APPID
            APP_CHANNEL: "渠道号",
    	]
+```
+
+在你自定义的MainApplication的getPackages()函数 return Arrays.<ReactPackage>asList 中加入
+
+```
+	new TalkingDataPackage(),
+```
+
+注意导入 talkingdata的对应包
+
+```
+	import cn.reactnative.modules.talkingdata.TalkingDataPackage;
 ```
 
 在你自定义的MainActivity的onCreate()中第一行加入
