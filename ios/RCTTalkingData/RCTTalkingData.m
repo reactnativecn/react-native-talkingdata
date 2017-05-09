@@ -9,7 +9,12 @@
 #import "RCTTalkingData.h"
 #import "TalkingData.h"
 #import "TalkingDataSMS.h"
+
+#if __has_include(<React/RCTUtils.h>)
+#import <React/RCTUtils.h>
+#else
 #import "RCTUtils.h"
+#endif
 
 @interface RCTSMSDelegate: NSObject <TalkingDataSMSDelegate>
 
