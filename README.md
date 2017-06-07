@@ -5,7 +5,7 @@ React Native的TalkingData插件
 ### 首先安装npm包
 
 ```bash
-npm install react-native-talkingdata --save
+npm install @cross2d/react-native-talkingdata --save
 ```
 
 ### link
