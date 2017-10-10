@@ -1,10 +1,11 @@
 {
   "name": "@cross2d/react-native-talkingdata",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "React Native TalkingData",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release":"npm publish --access public"
   },
   "repository": {
     "type": "git",
