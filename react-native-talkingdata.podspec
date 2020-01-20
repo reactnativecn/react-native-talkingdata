@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/cross2d/react-native-talkingdata.git", :tag => "v#{s.version}" }
   s.source_files  = "ios/**/*.{h,m}"
   s.libraries =  [
-    "TalkingData",
     "z"
   ]
   s.preserve_paths = "libTalkingData.a"
