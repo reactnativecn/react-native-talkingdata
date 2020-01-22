@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 # 解决：添加spec.pod_target_xcconfig。
 # 参考： https://www.jianshu.com/p/88180b4d2ab7/
 # 执行命令跳过模拟器验证：pod lib lint --skip-import-validation
-  s.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
+#  s.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
 
   s.frameworks = [
       "AdSupport",
