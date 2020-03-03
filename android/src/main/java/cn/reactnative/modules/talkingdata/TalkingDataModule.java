@@ -47,6 +47,7 @@ public class TalkingDataModule extends ReactContextBaseJavaModule {
             registered = true;
         }
     }
+
     public static void registerSMS(Context context, String appID, String secretId) {
         TalkingDataSMS.init(context, appID, secretId);
     }
@@ -126,7 +127,7 @@ public class TalkingDataModule extends ReactContextBaseJavaModule {
 
                 @Override
                 public void onApplyFailed(int i, String s) {
-                    promise.reject(""+i,s,null);
+                    promise.reject(""+i,s);
                 }
             });
         }
@@ -139,7 +140,7 @@ public class TalkingDataModule extends ReactContextBaseJavaModule {
 
                 @Override
                 public void onApplyFailed(int i, String s) {
-                    promise.reject(""+i,s,null);
+                    promise.reject(""+i,s);
                 }
             });
         }
@@ -155,7 +156,7 @@ public class TalkingDataModule extends ReactContextBaseJavaModule {
 
             @Override
             public void onVerifyFailed(int i, String s) {
-                promise.reject(""+i,s,null);
+                promise.reject(""+i,s);
             }
         });
     }

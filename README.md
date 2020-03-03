@@ -5,7 +5,7 @@ React Native的TalkingData插件
 ### 首先安装npm包
 
 ```bash
-npm install react-native-talkingdata --save
+npm install @cross2d/react-native-talkingdata --save
 ```
 
 ### link
@@ -14,6 +14,23 @@ rnpm link
 ```
 
 #### Note: rnpm requires node version 4.1 or higher
+
+
+### 自动link注意
+#### Android版本需要手动修改如下配置
+```
+app/build.gradle中 
+compile project(':@cross2d/react-native-talkingdata')
+修改为
+compile project(':react-native-talkingdata')
+
+项目的 settings.gradle
+include ':@cross2d/react-native-talkingdata'
+project(':@cross2d/react-native-talkingdata').projectDir = new File(rootProject.projectDir, '../node_modules/@cross2d/react-native-talkingdata/android')
+需要修改为  
+include ':react-native-talkingdata'
+project(':react-native-talkingdata').projectDir = new File(rootProject.projectDir, '../node_modules/@cross2d/react-native-talkingdata/android')
+```
 
 
 ### iOS工程配置
@@ -44,9 +61,21 @@ rnpm link
 
 ```
 	manifestPlaceholders = [
-           TD_APPID: "talkingdata的APPID",//在此修改微信APPID
+           TD_APPID: "talkingdata的APPID",//在此修改为你的TalkingData APPID
            APP_CHANNEL: "渠道号",
    	]
+```
+
+在你自定义的MainApplication的getPackages()函数 return Arrays.<ReactPackage>asList 中加入
+
+```
+	new TalkingDataPackage(),
+```
+
+注意导入 talkingdata的对应包
+
+```
+	import cn.reactnative.modules.talkingdata.TalkingDataPackage;
 ```
 
 在你自定义的MainActivity的onCreate()中第一行加入
@@ -54,6 +83,9 @@ rnpm link
 ```
 	TalkingDataModule.register(getApplicationContext(), null, null, true);
 ```
+
+
+
 
 
 ## 如何使用
